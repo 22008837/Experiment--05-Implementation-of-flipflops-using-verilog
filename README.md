@@ -128,7 +128,8 @@ Developed by: C.Prabha
 RegisterNumber: 212222110032
 
 ## SR Flipflop
-```module sr(s,r,clk,q,qbar);
+```
+module sr(s,r,clk,q,qbar);
 input s,r,clk;
 output reg q;
 output reg qbar;
@@ -188,30 +189,29 @@ end endmodule
 
 ### RTL LOGIC FOR FLIPFLOPS 
 ### SR Flipflop
-![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/e1cba72f-d4b3-4f47-acda-fe7c005a8a61)
+![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/e377d5d9-a695-4616-8799-113b07c62da3)
 
 ### JK Flipflop
-![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/b2cf78ff-d365-490e-95fe-cc1f5a0e82fa)
+![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/f351040f-8c2d-4e3f-895c-c87f3faec17e)
 
 ### T Flipflop
-![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/0beb4683-b7c9-4591-9af2-2913afcc133b)
+![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/bb1d611b-82d6-40bd-b324-f433a2aaad12)
 
 ### D Flipflop
-![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/5089fb93-1b02-42e0-9657-2b8244e13cf1)
+![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/0f4d9318-1fed-462d-9f58-c8969633cdf0)
 
 ### TIMING DIGRAMS FOR FLIP FLOPS 
 ### SR Flipflop
-![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/9641a3e4-fde1-4111-8275-ffb1cd812ad0)
+![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/8f9caf40-0e4e-4b1b-b34b-5708c2114236)
 
 ### JK Flipflop
-![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/82037841-9b2a-4770-ab6c-b17e3d68f164)
+![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/bf0ca749-0fee-4dc9-b1ae-2ab625e4f2be)
 
 ### T Flipflop
-![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/e168aca8-ed78-4d17-94d2-8a54c5d6ebd8)
+![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/fbc0771d-8ab8-4657-ac70-c723bd909774)
 
 ### D Flipflop
-![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/ce866662-a5d0-4504-9fb3-23fbc3cfd2ee)
-
+![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/663b20a2-58f3-494f-9711-e5aeed07019d)
 
 ### RESULTS 
 Thus, the program for flipflops is implemented and its functional table is successfully verified in quartus using Verilog programming.
