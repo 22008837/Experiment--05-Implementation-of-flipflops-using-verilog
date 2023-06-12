@@ -128,84 +128,90 @@ Developed by: C.Prabha
 RegisterNumber: 212222110032
 
 ## SR Flipflop
-```
-module SR(S,R,clk,Q,Qbar);
-input S,R,clk;
-output Q,Qbar;
-wire X,Y;
-nand (X,S,clk);
-nand (Y,R,clk);
-nand (Q,X,Qbar);
-nand (Qbar,Y,Q);
+```module sr(s,r,clk,q,qbar);
+input s,r,clk;
+output reg q;
+output reg qbar;
+always @(posedge clk)
+begin
+q=s|(~r&q);
+qbar=r|(~s&~q);
+end
 endmodule
 ``` 
 
 ## JK flipflop
 ```
-module JK(J,K,clk,Q,Qbar);
-input J,K,clk;
-output Q,Qbar;
-wire X,Y;
-nand (X,J,clk,Qbar);
-nand (Y,K,clk,Q);
-nand (Q,X,Qbar);
-nand (Qbar,Y,Q);
+module jkflipflop(j,k,clk,q,qbar);
+input j,k,clk;
+output q,qbar;
+reg q,qbar;
+always @(posedge clk)
+begin 
+q<=(j&~q)|(~k&q);
+qbar<=~q;
+end
 endmodule
 ```
 
 ## T Flipflop
 ```
-module TF(T,clk,Q,Qbar);
+module t(T,clk,q,qbar);
 input T,clk;
-output Q,Qbar;
-wire S,R;
-nand (S,T,clk,Qbar);
-nand (R,T,clk,Q);
-nand (Q,S,Qbar);
-nand (Qbar,R,Q);
+output reg q;
+output reg qbar;
+initial q=0;
+initial qbar=1;
+always @ (posedge clk)
+begin
+q=(T&(~q))|((~T)&q);
+qbar=(~q);
+end
 endmodule
 ```
 
 ## D Flipflop
 ```
-module DF(D,clk,Q,Qbar);
-input D,clk;
-output Q,Qbar;
-assign Dbar=~D;
-wire X,Y;
-nand (X,D,clk);
-nand (Y,Dbar,clk);
-nand (Q,X,Qbar);
-nand (Qbar,Y,Q);
-endmodule
+module d(d,clk,q,qbar); 
+input d,clk; 
+output reg q; 
+output reg qbar; 
+initial q=0; 
+initiak qbar=1; 
+always @(posedge clk) 
+begin 
+q=d; 
+qbar=~q; 
+end endmodule
 */
 ```
 
 ### RTL LOGIC FOR FLIPFLOPS 
 ### SR Flipflop
-![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/ac6176c9-b413-41f9-b949-a40073a98ffd)
+![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/e1cba72f-d4b3-4f47-acda-fe7c005a8a61)
 
 ### JK Flipflop
-![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/f6aea1ac-d021-4990-b428-44bdb55acbde)
+![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/b2cf78ff-d365-490e-95fe-cc1f5a0e82fa)
 
 ### T Flipflop
-![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/7d547626-74bb-48c2-b4e9-b20a20100889)
+![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/0beb4683-b7c9-4591-9af2-2913afcc133b)
 
 ### D Flipflop
-![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/60d6e3b2-6ee6-4b5b-9976-a9e7339ca7b0)
+![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/5089fb93-1b02-42e0-9657-2b8244e13cf1)
 
 ### TIMING DIGRAMS FOR FLIP FLOPS 
 ### SR Flipflop
-![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/23adb7eb-0e60-46c1-a2bc-c85652484843)
+![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/9641a3e4-fde1-4111-8275-ffb1cd812ad0)
 
 ### JK Flipflop
-![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/02748ec9-75b0-478d-98e0-b78050034d38)
+![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/82037841-9b2a-4770-ab6c-b17e3d68f164)
 
 ### T Flipflop
-![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/f363553d-2c26-4f8d-abb8-506e1578c5f6)
+![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/e168aca8-ed78-4d17-94d2-8a54c5d6ebd8)
 
 ### D Flipflop
-![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/329f6fcd-f680-4b44-9a1e-54e5b17f9000)
+![image](https://github.com/22008837/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120194155/ce866662-a5d0-4504-9fb3-23fbc3cfd2ee)
+
 
 ### RESULTS 
 Thus, the program for flipflops is implemented and its functional table is successfully verified in quartus using Verilog programming.
